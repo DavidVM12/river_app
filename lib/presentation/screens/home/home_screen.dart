@@ -27,6 +27,10 @@ class _HomeScreenView extends StatelessWidget {
             title: 'State Provider',
             subTitle: 'Simple state',
             location: '/state-provider'),
+        _CustomListTile(
+            title: 'Future Provider',
+            subTitle: 'Simple future + Family',
+            location: '/future-provider'),
       ],
     );
   }
@@ -43,7 +47,7 @@ class _CustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(title),
+      title: Text(title, style: Theme.of(context).textTheme.titleMedium),
       subtitle: Text(subTitle),
       trailing: const Icon(Icons.arrow_forward_ios),
       onTap: () => context.push(location),
