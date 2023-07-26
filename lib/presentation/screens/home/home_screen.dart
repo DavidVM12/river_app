@@ -31,6 +31,10 @@ class _HomeScreenView extends StatelessWidget {
             title: 'Future Provider',
             subTitle: 'Simple future + Family',
             location: '/future-provider'),
+        _CustomListTile(
+            title: 'Stream Provider',
+            subTitle: 'Simple Stream',
+            location: '/stream-provider'),
       ],
     );
   }
