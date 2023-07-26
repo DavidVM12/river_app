@@ -38,8 +38,12 @@ class _TodosView extends ConsumerWidget {
         return SwitchListTile(
             title: Text(todo.description,
                 style: AppTheme().getTheme().textTheme.titleMedium),
+            subtitle: Text(todo.completedAt.toString()),
             value: todo.done, // True o False
-            onChanged: (value) {});
+            onChanged: (_) {
+              ref.read(todosProvider.notifier).toggleTodo(
+                  todo.id); // Llamamos al metodo toggleTodo del provider
+            });
       },
     );
   }
